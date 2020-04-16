@@ -1,0 +1,45 @@
+<assembly>
+    <id>${env}</id>
+    <formats>
+        <format>zip</format>
+    </formats>
+    <includeBaseDirectory>true</includeBaseDirectory>
+
+    <fileSets>
+        <fileSet>
+            <directory>${project.build.directory}/classes/env/${env}</directory>
+            <outputDirectory>/</outputDirectory>
+            <includes>
+                <include>**/*.properties</include>
+                <include>**/*.xml</include>
+                <include>**/*.sh</include>
+                <include>**/*.json</include>
+                <include>**/*.sql</include>
+                <include>**/*.txt</include>
+            </includes>
+            <lineEnding>lf</lineEnding>
+        </fileSet>
+
+        <fileSet>
+            <directory>${project.build.directory}</directory>
+            <outputDirectory>/</outputDirectory>
+            <includes>
+                <include>*.jar</include>
+            </includes>
+        </fileSet>
+
+    </fileSets>
+
+
+    <dependencySets>
+        <dependencySet>
+            <useProjectArtifact>false</useProjectArtifact>
+            <outputDirectory>/lib</outputDirectory>
+            <unpack>false</unpack>
+            <excludes>
+                <exclude>org.slf4j:slf4j-log4j12</exclude>
+            </excludes>
+            <scope>runtime</scope>
+        </dependencySet>
+    </dependencySets>
+</assembly>
