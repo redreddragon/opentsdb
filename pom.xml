@@ -10,7 +10,7 @@
 
     <properties>
         <java.version>1.8</java.version>
-        <fastjson.version>1.2.9</fastjson.version>
+        <fastjson.version>1.2.25</fastjson.version>
         <lombok.version>1.16.6</lombok.version>
         <pac4j.version>2.0.0</pac4j.version>
     </properties>
